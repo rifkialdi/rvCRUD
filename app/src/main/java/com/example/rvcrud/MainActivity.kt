@@ -33,14 +33,12 @@ class MainActivity : AppCompatActivity() {
         idbtn_update.setOnClickListener {
             updateSiswa()
         }
-
         adp_daftar_siswa?.aturSaatItemDiklik {
             Toast.makeText(this, it.name, Toast.LENGTH_SHORT).show()
             idedt_name.setText(it.name)
             idedt_email.setText(it.email)
             ms = it
         }
-
         adp_daftar_siswa?.aturSaatItemDihapus {
             hapusSiswa(it.id)
         }
